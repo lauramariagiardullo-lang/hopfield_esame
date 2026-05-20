@@ -34,11 +34,11 @@ endif()
 string(APPEND CMAKE_EXE_LINKER_FLAGS_DEBUG " -fsanitize=address,undefined")
 
 # se usato, richiedi il componente graphics della libreria SFML (versione 2.6 in Ubuntu 24.04)
-### find_package(SFML 2.6 COMPONENTS graphics REQUIRED)
+find_package(SFML 2.6 COMPONENTS graphics REQUIRED)
 
 add_executable(final main.cpp final.cpp final.hpp)
 # nel caso si usi SFML. analogamente per eventuali altre librerie
-### target_link_libraries(final PRIVATE sfml-graphics)
+target_link_libraries(final PRIVATE sfml-graphics)
 
 # il testing e' abilitato di default
 # per disabilitarlo, passare -DBUILD_TESTING=OFF a cmake durante la fase di configurazione
