@@ -2,6 +2,7 @@
 #define PF_GET_PATTERN_HPP
 #include <SFML/Graphics.hpp>
 #include <filesystem>
+#include <stdexcept>
 #include <vector>
 namespace pf {
 enum class Stato_Neurone : int8_t
@@ -16,6 +17,19 @@ int Valore_Neurone(Stato_Neurone s)
   return v;
 }
 
+std::vector<std::string>
+get_file_names(std::filesystem::path const& cartella_immagini)
+{
+  std::vector<std::string> file_names;
+  for (auto const& entry :
+       std::filesystem::directory_iterator(cartella_immagini)) {
+    if (entry.is_regular_file()) {
+      file_names.push_back(entry.path().filename().string());
+    }
+  }
+  return file_names;
+}
+
 class Immagine
 {
  private:
@@ -24,12 +38,18 @@ class Immagine
 
  public:
   explicit Immagine(std ::string const& file_name)
-  {}
+  {
+    if (!image_originale_.loadFromFile(file_name))
+      throw std::runtime_error("impossibile caricare il file");
+  }
   void load_image(std::string const& file_name)
-  {}
+  {
+    if (!image_originale_.loadFromFile(file_name))
+      throw std::runtime_error("impossibile caricare il file");
+  }
   sf::Image interpolazione() const
   {}
-  std::vector<Stato_Neurone> binarizzazione() const
+  Pattern binarizzazione() const
   {}
   void show_image() const {};
 };
