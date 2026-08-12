@@ -24,7 +24,7 @@ get_file_names(std::filesystem::path const& cartella_immagini)
   for (auto const& entry :
        std::filesystem::directory_iterator(cartella_immagini)) {
     if (entry.is_regular_file()) {
-      file_names.push_back(entry.path().filename().string());
+      file_names.push_back(entry.path().string());
     }
   }
   return file_names;
