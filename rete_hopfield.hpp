@@ -1,12 +1,13 @@
 #include <filesystem>
 #include <vector>
+#include "costanti.hpp"
 
 class Matrice_Pesi
 {
   std::vector<std::vector<double>> mp;
 
  public:
- 
+
   double operator()(int riga, int colonna) const
   {
     return mp[riga][colonna];
