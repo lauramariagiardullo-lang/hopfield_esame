@@ -1,7 +1,9 @@
 #include "costanti.hpp"
+#include "pattern.hpp"
 #include <filesystem>
 #include <vector>
 
+namespace pf {
 class Matrice_Pesi
 {
   std::vector<std::vector<double>> mp_;
@@ -9,7 +11,7 @@ class Matrice_Pesi
  public:
   double operator()(int riga, int colonna) const
   {
-    return mp[riga][colonna];
+    return mp_[riga][colonna];
   }
   void salva(std::filesystem::path const& file_txt) const
   {}
@@ -27,3 +29,4 @@ class Rete_hopfield
     return precedente == attuale;
   }
 }
+} // namespace pf
