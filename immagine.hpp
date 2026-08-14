@@ -25,7 +25,7 @@ std::vector<std::string> get_file_names(std::filesystem::path const& cartella)
     }
   }
 
-  if (cartella.empty()) {
+  if (file_names.empty()) {
     throw std::runtime_error(
         "la cartella è vuota o non contiene oggetti validi");
   }
