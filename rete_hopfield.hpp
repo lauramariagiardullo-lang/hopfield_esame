@@ -1,23 +1,6 @@
-#include "costanti.hpp"
-#include "pattern.hpp"
-#include <filesystem>
-#include <vector>
+#include "matrice_pesi.hpp"
 
 namespace pf {
-class Matrice_Pesi
-{
-  std::vector<std::vector<double>> mp_;
-
- public:
-  double operator()(int riga, int colonna) const
-  {
-    return mp_[riga][colonna];
-  }
-  void salva(std::filesystem::path const& file_txt) const
-  {}
-  void carica(std::filesystem::path const& file_txt) const
-  {}
-};
 
 class Rete_hopfield
 {
@@ -28,5 +11,5 @@ class Rete_hopfield
   {
     return precedente == attuale;
   }
-}
+};
 } // namespace pf

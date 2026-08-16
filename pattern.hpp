@@ -42,6 +42,10 @@ class Pattern
   {
     return pattern_.end();
   }
+
+
+  int& operator[] (int i){};
+  int operator [] (int i) const {}
 };
 
 bool operator==(Pattern const& a, Pattern const& b)
