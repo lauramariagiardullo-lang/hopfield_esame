@@ -27,32 +27,38 @@ class Pattern
 
  public:
   Pattern()
-      : pattern_(N_neuroni){};
+      : pattern_(N_neuroni)
+  {}
 
   std::size_t size() const
   {
     return pattern_.size();
   }
 
-  auto begin() const
+  //auto begin() const{return pattern_.begin();}
+  //auto end() const{return pattern_.end();}
+
+  Stato_Neurone& operator[](std::size_t i)
   {
-    return pattern_.begin();
+    assert(i < N_neuroni);
+    return pattern_[i];
   }
-  auto end() const
+  Stato_Neurone const& operator[](std::size_t i) const
   {
-    return pattern_.end();
+    assert(i < N_neuroni);
+    return pattern_[i];
   }
 
-
-  int& operator[] (int i){};
-  int operator [] (int i) const {}
-};
-
-bool operator==(Pattern const& a, Pattern const& b)
+friend bool operator==(Pattern const& a, Pattern const& b)
 {
   assert(a.size() == N_neuroni);
   assert(b.size() == N_neuroni);
-  return std::equal(a.begin(), a.end(), b.begin());
+  return std::equal(a.pattern_.begin(), a.pattern_.end(), b.pattern_.begin());
 }
+
+
+};
+
+
 } // namespace pf
 #endif

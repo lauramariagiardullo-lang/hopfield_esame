@@ -54,7 +54,7 @@ class Immagine
   {}
   Pattern binarizzazione() const
   {}
-  void show_image() const {};
+  void show_image() const {}
 };
 
 } // namespace pf
