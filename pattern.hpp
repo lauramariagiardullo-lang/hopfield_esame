@@ -1,12 +1,5 @@
 #ifndef PF_GET_PATTERN_HPP
 #define PF_GET_PATTERN_HPP
-#include "costanti.hpp"
-#include <SFML/Graphics.hpp>
-#include <algorithm>
-#include <cassert>
-#include <filesystem>
-#include <stdexcept>
-#include <vector>
 
 namespace pf {
 enum class Stato_Neurone : int8_t
@@ -20,45 +13,36 @@ int Valore_Neurone(Stato_Neurone s)
   int v{static_cast<int>(s)};
   return v;
 }
+
 class Pattern
 {
  private:
   std::vector<Stato_Neurone> pattern_;
 
  public:
-  Pattern()
-      : pattern_(N_neuroni)
-  {}
+  Pattern();
 
-  std::size_t size() const
-  {
-    return pattern_.size();
-  }
+  Pattern(std::size_t n,
+          Stato_Neurone sn); // solo per semplificare i test, evitando un numero
+                             // eccessivo di neuroni
 
-  //auto begin() const{return pattern_.begin();}
-  //auto end() const{return pattern_.end();}
+  std::size_t size() const;
 
-  Stato_Neurone& operator[](std::size_t i)
-  {
-    assert(i < N_neuroni);
-    return pattern_[i];
-  }
-  Stato_Neurone const& operator[](std::size_t i) const
-  {
-    assert(i < N_neuroni);
-    return pattern_[i];
-  }
+  std::vector<pf::Stato_Neurone>::iterator begin();
+  std::vector<pf::Stato_Neurone>::iterator end();
+  std::vector<pf::Stato_Neurone>::const_iterator begin() const;
+  std::vector<pf::Stato_Neurone>::const_iterator end() const;
 
-friend bool operator==(Pattern const& a, Pattern const& b)
-{
-  assert(a.size() == N_neuroni);
-  assert(b.size() == N_neuroni);
-  return std::equal(a.pattern_.begin(), a.pattern_.end(), b.pattern_.begin());
-}
+  Stato_Neurone& operator[](std::size_t i);
+  Stato_Neurone const& operator[](std::size_t i) const;
 
-
+  friend bool operator==(Pattern const& a, Pattern const& b);
 };
 
+Pattern corruzione_rumore_casuale(Pattern const& originale, double probabilità);
+
+Pattern corruzione_taglio(Pattern const& originale,
+                          std::string metà_selezionata);
 
 } // namespace pf
 #endif

@@ -20,7 +20,7 @@ class Rete_Hopfield
 
     double somma{std::inner_product(riga_i.begin(), riga_i.end(),
                                     corrotto.begin(), 0.0)};
-    int neurone_aggiornato{somma > 0 ? +1 : -1};
+    Stato_Neurone neurone_aggiornato{somma > 0 ? Stato_Neurone::positivo : Stato_Neurone::negativo};
     return neurone_aggiornato == corrotto[i];
     corrotto[i] = neurone_aggiornato;
   }

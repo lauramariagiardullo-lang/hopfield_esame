@@ -29,3 +29,10 @@
 94	21420	1786994176644580451	CMakeFiles/final.test.dir/Debug/matrice_pesi.test.cpp.o	81657ee01fba9eef
 90	21469	1786994176676746258	CMakeFiles/final.test.dir/Debug/pattern.test.cpp.o	513eb5c993c076f1
 89	22513	1786994177707108097	CMakeFiles/final.test.dir/Debug/immagine.test.cpp.o	6158e1cd87591ef9
+33	6150	1787049655453142204	CMakeFiles/final.dir/Debug/pattern.cpp.o	b09e795d74594f3e
+37	6164	1787049655449142204	CMakeFiles/final.test.dir/Debug/pattern.cpp.o	cf57c1873674365b
+41	6894	1787049656225142102	CMakeFiles/final.test.dir/Debug/matrice_pesi.cpp.o	f012adb2f6eb37a4
+34	7091	1787049656413142078	CMakeFiles/final.dir/Debug/matrice_pesi.cpp.o	e97fba466106cf8d
+40	20368	1787049669669153934	CMakeFiles/final.test.dir/Debug/matrice_pesi.test.cpp.o	81657ee01fba9eef
+36	20371	1787049669677153959	CMakeFiles/final.test.dir/Debug/pattern.test.cpp.o	513eb5c993c076f1
+35	21009	1787049670317155944	CMakeFiles/final.test.dir/Debug/immagine.test.cpp.o	6158e1cd87591ef9
