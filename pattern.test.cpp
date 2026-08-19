@@ -26,4 +26,3 @@ TEST_CASE("Testo corruzione_rumore_casuale - probabilità = 1"){
     CHECK(corrotto==opposto);
 }
 
-

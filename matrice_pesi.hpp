@@ -1,8 +1,8 @@
-#include "costanti.hpp"
+#ifndef PF_MATRICE_PESI_HPP
+#define PF_MATRICE_PESI_HPP
 #include "pattern.hpp"
-#include <cassert>
-#include <fstream>
-#include <numeric>
+#include <filesystem>
+#include <vector>
 
 namespace pf {
 class Matrice_Pesi
@@ -10,14 +10,14 @@ class Matrice_Pesi
   std::vector<std::vector<double>> mp_;
 
  public:
-  Matrice_Pesi();
+  explicit Matrice_Pesi();
 
-  double calcolo_elemento_ij(std::vector<Pattern> const& vp, std::size_t i, std::size_t j);
+  double calcolo_elemento_ij(std::vector<Pattern> const& vp, std::size_t i,
+                             std::size_t j);
 
   void calcolo_matrice(std::vector<Pattern> const& vp);
 
-  bool è_simmetrica()
-  {}
+  // bool è_simmetrica(){}
 
   // std::vector<std::vector<double>>::const_iterator begin() const;
   // std::vector<std::vector<double>>::const_iterator end() const;
@@ -36,3 +36,5 @@ class Matrice_Pesi
 
 std::istream& operator>>(std::istream& in, Matrice_Pesi& matrix);
 } // namespace pf
+
+#endif

@@ -1,4 +1,11 @@
 #include "matrice_pesi.hpp"
+#include "costanti.hpp"
+#include <algorithm>
+#include <cassert>
+#include <fstream>
+#include <numeric>
+#include <random>
+#include <stdexcept>
 
 namespace pf {
 
@@ -29,7 +36,7 @@ void Matrice_Pesi::calcolo_matrice(std::vector<Pattern> const& vp)
       }
     }
   }
-  assert((*this).è_simmetrica());
+  // assert((*this).è_simmetrica());
 }
 
 // std::vector<std::vector<double>>::const_iterator Matrice_Pesi::begin()

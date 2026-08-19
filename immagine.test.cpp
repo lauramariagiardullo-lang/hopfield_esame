@@ -33,7 +33,8 @@ TEST_CASE("testo get_file_names - path fornito non corrisponde a una cartella "
   std::filesystem::remove(p);
 }
 
-TEST_CASE("testo get_file_names - path inesistente"){
+TEST_CASE("testo get_file_names - path inesistente")
+{
   std::filesystem::path p{"path"};
   CHECK_THROWS(pf::get_file_names(p));
 }
@@ -48,11 +49,11 @@ TEST_CASE("testo get_file_names - tre file con stessa estensione")
   REQUIRE(file1);
   REQUIRE(file2);
   REQUIRE(file3);
-  std::vector<std::string> risultato{pf::get_file_names(p)};
+  std::vector<std::filesystem::path> risultato{pf::get_file_names(p)};
   std::sort(risultato.begin(), risultato.end());
   CHECK(risultato
-        == std::vector<std::string>{"cartella/img_a.png", "cartella/img_b.png",
-                                    "cartella/img_c.png"});
+        == std::vector<std::filesystem::path>{
+            p / "img_a.png", p / "img_b.png", p / "img_c.png"});
   std::filesystem::remove_all(p);
 }
 
@@ -68,11 +69,11 @@ TEST_CASE("testo get_file_names - quattro file con estensioni diverse")
   REQUIRE(file2);
   REQUIRE(file3);
   REQUIRE(file4);
-  std::vector<std::string> risultato{pf::get_file_names(p)};
+  std::vector<std::filesystem::path> risultato{pf::get_file_names(p)};
   std::sort(risultato.begin(), risultato.end());
   CHECK(risultato
-        == std::vector<std::string>{
-            "cartella/file_a.txt", "cartella/file_b.png", "cartella/file_c.jpg",
-            "cartella/file_d.mp3"});
+        == std::vector<std::filesystem::path>{
+            p / "file_a.txt", p / "file_b.png", p / "file_c.jpg",
+            p / "file_d.mp3"});
   std::filesystem::remove_all(p);
 }

@@ -1,7 +1,9 @@
 #include "pattern.hpp"
 #include "costanti.hpp"
+#include "immagine.hpp"
 #include <algorithm>
 #include <cassert>
+#include <filesystem>
 #include <random>
 #include <stdexcept>
 #include <vector>
@@ -23,21 +25,21 @@ std::size_t Pattern::size() const
   return pattern_.size();
 }
 
-std::vector<pf::Stato_Neurone>::iterator Pattern::begin()
+std::vector<Stato_Neurone>::iterator Pattern::begin()
 {
   return pattern_.begin();
 }
 
-std::vector<pf::Stato_Neurone>::iterator Pattern::end()
+std::vector<Stato_Neurone>::iterator Pattern::end()
 {
   return pattern_.end();
 }
 
-std::vector<pf::Stato_Neurone>::const_iterator Pattern::begin() const
+std::vector<Stato_Neurone>::const_iterator Pattern::begin() const
 {
   return pattern_.begin();
 }
-std::vector<pf::Stato_Neurone>::const_iterator Pattern::end() const
+std::vector<Stato_Neurone>::const_iterator Pattern::end() const
 {
   return pattern_.end();
 }
@@ -86,11 +88,11 @@ Pattern corruzione_taglio(Pattern const& originale,
                                          : Stato_Neurone::positivo;
   };
   if (metà_selezionata == "sup") {
-    std::for_each(corrotto.begin(), corrotto.begin() + corrotto.size() / 2,
+    std::for_each(corrotto.begin(), corrotto.begin() + static_cast<unsigned int>(corrotto.size()) / 2,
                   inverti);
 
   } else if (metà_selezionata == "inf") {
-    std::for_each(corrotto.begin() + corrotto.size() / 2, corrotto.end(),
+    std::for_each(corrotto.begin() + static_cast<unsigned int>(corrotto.size()) / 2, corrotto.end(),
                   inverti);
 
   } else {
@@ -98,4 +100,17 @@ Pattern corruzione_taglio(Pattern const& originale,
   }
   return corrotto;
 }
+
+std::vector<Pattern>
+insieme_pattern(std::filesystem::path const& cartella_immagini)
+{
+  auto path{get_file_names(cartella_immagini)};
+  std::vector<Pattern> p;
+  std::for_each(path.begin(), path.end(), [&](std::filesystem::path const& percorso) {
+    Immagine img(percorso);
+    p.push_back(img.binarizzazione());
+  });
+  return p;
+}
+
 } // namespace pf
