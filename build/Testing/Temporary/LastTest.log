@@ -1,19 +1,67 @@
-Start testing: Aug 17 16:56 CEST
+Start testing: Oct 10 16:49 CEST
 ----------------------------------------------------------
-Unable to find executable: /home/mariavittoria/hopfield_esame/build/Debug/final.test
 1/1 Testing: final.test
 1/1 Test: final.test
-Command: ""
+Command: "/home/mariavittoria/hopfield_esame/build/final.test"
 Directory: /home/mariavittoria/hopfield_esame/build
-"final.test" start time: 
+"final.test" start time: Oct 10 16:49 CEST
 Output:
 ----------------------------------------------------------
+final.test: /home/mariavittoria/hopfield_esame/pattern.cpp:61: bool pf::operator==(const Pattern&, const Pattern&): Assertion `a.size() == N_neuroni' failed.
+[doctest] doctest version is "2.4.12"
+[doctest] run with "--help" for options
+===============================================================================
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:17:
+TEST CASE:  Testo Matrice_Pesi - calcolo_elemento_ij - vettore pattern vuoto
+
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:24: ERROR: CHECK_THROWS( hebbs.calcolo_elemento_ij(vp, i, j) ) did NOT throw at all!
+
+===============================================================================
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:27:
+TEST CASE:  Testo Matrice_Pesi - calcolo_matrice - vettore pattern vuoto
+
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:32: ERROR: CHECK_THROWS( hebbs.calcolo_matrice(vp) ) did NOT throw at all!
+
+===============================================================================
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:35:
+TEST CASE:  Testo Matrice_Pesi - calcolo_matrice - uso di un singolo pattern
+
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:35: ERROR: test case THREW exception: Pattern non trovati, impossibile calcolare la matrice dei pesi
+
+===============================================================================
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:59:
+TEST CASE:  Testo Matrice_Pesi - calcolo_matrice - 3 pattern
+
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:59: ERROR: test case THREW exception: Pattern non trovati, impossibile calcolare la matrice dei pesi
+
+===============================================================================
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:90:
+TEST CASE:  Testo Matrice_Pesi - calcolo_matrice - verifico diagonale nulla
+
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:90: ERROR: test case THREW exception: Pattern non trovati, impossibile calcolare la matrice dei pesi
+
+===============================================================================
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:119:
+TEST CASE:  Testo Matrice_Pesi - verifico simmetria
+
+/home/mariavittoria/hopfield_esame/matrice_pesi.test.cpp:119: ERROR: test case THREW exception: Pattern non trovati, impossibile calcolare la matrice dei pesi
+
+===============================================================================
+/home/mariavittoria/hopfield_esame/pattern.test.cpp:5:
+TEST CASE:  Testo curruzione_rumore_casule - probabilità nulla
+
+/home/mariavittoria/hopfield_esame/pattern.test.cpp:5: FATAL ERROR: test case CRASHED: SIGABRT - Abort (abnormal termination) signal
+
+===============================================================================
+[doctest] test cases:     18 |     11 passed | 7 failed | 1 skipped
+[doctest] assertions: 810031 | 810029 passed | 2 failed |
+[doctest] Status: FAILURE!
 <end of output>
-Test time =   0.00 sec
+Test time =   4.68 sec
 ----------------------------------------------------------
-Test Passed.
-"final.test" end time: Aug 17 16:56 CEST
-"final.test" time elapsed: 00:00:00
+Test Failed.
+"final.test" end time: Oct 10 16:49 CEST
+"final.test" time elapsed: 00:00:04
 ----------------------------------------------------------
 
-End testing: Aug 17 16:56 CEST
+End testing: Oct 10 16:49 CEST

@@ -46,13 +46,13 @@ std::vector<Stato_Neurone>::const_iterator Pattern::end() const
 
 Stato_Neurone& Pattern::operator[](std::size_t i)
 {
-  assert(i < N_neuroni);
+  assert(i < pattern_.size());
   return pattern_[i];
 }
 
 Stato_Neurone const& Pattern::operator[](std::size_t i) const
 {
-  assert(i < N_neuroni);
+  assert(i < pattern_.size());
   return pattern_[i];
 }
 
@@ -61,6 +61,15 @@ bool operator==(Pattern const& a, Pattern const& b)
   assert(a.size() == N_neuroni);
   assert(b.size() == N_neuroni);
   return std::equal(a.pattern_.begin(), a.pattern_.end(), b.pattern_.begin());
+}
+
+double operator*(double a, Stato_Neurone s)
+{
+  return a * Valore_Neurone(s);
+}
+double operator*(Stato_Neurone s, double a)
+{
+  return Valore_Neurone(s) * a;
 }
 
 Pattern corruzione_rumore_casuale(Pattern const& originale, double probabilità)
@@ -88,12 +97,15 @@ Pattern corruzione_taglio(Pattern const& originale,
                                          : Stato_Neurone::positivo;
   };
   if (metà_selezionata == "sup") {
-    std::for_each(corrotto.begin(), corrotto.begin() + static_cast<unsigned int>(corrotto.size()) / 2,
+    std::for_each(corrotto.begin(),
+                  corrotto.begin()
+                      + static_cast<unsigned int>(corrotto.size()) / 2,
                   inverti);
 
   } else if (metà_selezionata == "inf") {
-    std::for_each(corrotto.begin() + static_cast<unsigned int>(corrotto.size()) / 2, corrotto.end(),
-                  inverti);
+    std::for_each(corrotto.begin()
+                      + static_cast<unsigned int>(corrotto.size()) / 2,
+                  corrotto.end(), inverti);
 
   } else {
     throw std::runtime_error("porzione di taglio non riconosciuta");
@@ -106,10 +118,11 @@ insieme_pattern(std::filesystem::path const& cartella_immagini)
 {
   auto path{get_file_names(cartella_immagini)};
   std::vector<Pattern> p;
-  std::for_each(path.begin(), path.end(), [&](std::filesystem::path const& percorso) {
-    Immagine img(percorso);
-    p.push_back(img.binarizzazione());
-  });
+  std::for_each(path.begin(), path.end(),
+                [&](std::filesystem::path const& percorso) {
+                  Immagine img(percorso);
+                  p.push_back(img.binarizzazione());
+                });
   return p;
 }
 

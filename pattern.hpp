@@ -1,8 +1,8 @@
 #ifndef PF_GET_PATTERN_HPP
 #define PF_GET_PATTERN_HPP
+#include <filesystem>
 #include <string>
 #include <vector>
-#include <filesystem>
 
 namespace pf {
 enum class Stato_Neurone : int8_t
@@ -42,12 +42,16 @@ class Pattern
   friend bool operator==(Pattern const& a, Pattern const& b);
 };
 
+double operator*(double a, Stato_Neurone s);
+double operator*(Stato_Neurone s, double a);
+
 Pattern corruzione_rumore_casuale(Pattern const& originale, double probabilità);
 
 Pattern corruzione_taglio(Pattern const& originale,
                           std::string metà_selezionata);
 
-std::vector<Pattern> insieme_pattern(std::filesystem::path const& cartella_immagini);
+std::vector<Pattern>
+insieme_pattern(std::filesystem::path const& cartella_immagini);
 
 } // namespace pf
 #endif

@@ -23,18 +23,20 @@ class Matrice_Pesi
   // std::vector<std::vector<double>>::const_iterator end() const;
 
   std::vector<double> const& riga(std::size_t i) const;
+  std::vector<double>& riga(std::size_t i);
 
   double& operator()(std::size_t riga, std::size_t colonna);
   double operator()(std::size_t riga, std::size_t colonna) const;
 
   void salva(std::filesystem::path const& file_txt) const;
   void carica(std::filesystem::path const& file_txt);
-
+  friend bool operator==(Matrice_Pesi a, Matrice_Pesi b);
   friend std::ostream& operator<<(std::ostream& out,
                                   Matrice_Pesi const& matrix);
 };
 
 std::istream& operator>>(std::istream& in, Matrice_Pesi& matrix);
+
 } // namespace pf
 
 #endif

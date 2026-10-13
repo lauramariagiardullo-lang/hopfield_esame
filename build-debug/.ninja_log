@@ -1,0 +1,16 @@
+# ninja log v5
+3	45	1791648015179927628	CMakeFiles/final.dir/rete_hopfield.cpp.o	d9ca84985bdaf3a0
+8	52	1791648015183998606	CMakeFiles/final.test.dir/rete_hopfield.test.cpp.o	88be168f4553a404
+9	52	1791648015188069582	CMakeFiles/final.test.dir/rete_hopfield.cpp.o	3beca63ed9befc4d
+4	5601	1791648020716456192	CMakeFiles/final.test.dir/pattern.test.cpp.o	2b1ef2c9d60ac804
+6	7227	1791648022344846944	CMakeFiles/final.test.dir/matrice_pesi.cpp.o	5759a6029c85dcd0
+2	7248	1791648022365202481	CMakeFiles/final.dir/matrice_pesi.cpp.o	ebc85b59a81bf652
+5	7682	1791648022796652477	CMakeFiles/final.test.dir/matrice_pesi.test.cpp.o	d9e964dd2e3db2ab
+1	8698	1791648023826434073	CMakeFiles/final.dir/main.cpp.o	ad48d20f1069816f
+2	9058	1791648024184618977	CMakeFiles/final.dir/immagine.cpp.o	e6fbeffe7a45c5eb
+4	9151	1791648024278235484	CMakeFiles/final.test.dir/immagine.cpp.o	2678bf1e3c9175f1
+5	9234	1791648024363711427	CMakeFiles/final.test.dir/pattern.cpp.o	777053b999058c53
+2	9381	1791648024506171333	CMakeFiles/final.dir/pattern.cpp.o	d992d165a0d7774e
+9381	10309	1791648025426055288	final	10fe22dc259b440e
+3	14379	1791648029488197703	CMakeFiles/final.test.dir/immagine.test.cpp.o	924b2211401ad6c3
+14379	14819	1791648029939999113	final.test	b86b672e396b6bd0

@@ -18,6 +18,11 @@ double Matrice_Pesi::calcolo_elemento_ij(std::vector<Pattern> const& vp,
 {
   assert(i < N_neuroni);
   assert(j < N_neuroni);
+  if (vp.empty() == 0) {
+    throw std::runtime_error(
+        "Pattern non trovati, impossibile calcolare la matrice dei pesi");
+  }
+
   double somma_ij{std::accumulate(
       vp.begin(), vp.end(), 0.0, [i, j](double somma, Pattern const& p) {
         return somma + Valore_Neurone(p[i]) * Valore_Neurone(p[j]);
@@ -49,6 +54,12 @@ std::vector<double> const& Matrice_Pesi::riga(std::size_t i) const
   return mp_[i];
 }
 
+std::vector<double>& Matrice_Pesi::riga(std::size_t i)
+{
+  assert(i < N_neuroni);
+  return mp_[i];
+}
+
 double& Matrice_Pesi::operator()(std::size_t riga, std::size_t colonna)
 {
   assert(riga < N_neuroni);
@@ -65,9 +76,9 @@ double Matrice_Pesi::operator()(std::size_t riga, std::size_t colonna) const
 
 void Matrice_Pesi::salva(std::filesystem::path const& file_txt) const
 {
-  std::ofstream file{file_txt};
+  std::ofstream file("matrice_pesi.txt");
   if (!file) {
-    std::runtime_error("impossibile creare o aprire il file");
+    throw std::runtime_error(file_txt);
   }
   file << *this;
 }
@@ -75,7 +86,19 @@ void Matrice_Pesi::salva(std::filesystem::path const& file_txt) const
 void Matrice_Pesi::carica(std::filesystem::path const& file_txt)
 {
   std::ifstream file(file_txt);
+  if (!file) {
+    throw std::runtime_error("impossibile aprire il file");
+  }
   file >> *this;
+  if (!file) {
+    throw std::runtime_error(
+        "formato dati non coerente, caricamento impossibile");
+  }
+}
+
+bool operator==(Matrice_Pesi a, Matrice_Pesi b)
+{
+  return a.mp_ == b.mp_;
 }
 
 std::ostream& operator<<(std::ostream& out, Matrice_Pesi const& matrix)

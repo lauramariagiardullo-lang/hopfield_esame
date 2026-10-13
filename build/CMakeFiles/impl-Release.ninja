@@ -215,6 +215,7 @@ build CMakeFiles/final.dir/Release/main.cpp.o: CXX_COMPILER__final_unscanned_Rel
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.dir/Release/main.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.dir/Release
 
@@ -222,6 +223,7 @@ build CMakeFiles/final.dir/Release/immagine.cpp.o: CXX_COMPILER__final_unscanned
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.dir/Release/immagine.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.dir/Release
 
@@ -229,6 +231,7 @@ build CMakeFiles/final.dir/Release/pattern.cpp.o: CXX_COMPILER__final_unscanned_
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.dir/Release/pattern.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.dir/Release
 
@@ -236,6 +239,7 @@ build CMakeFiles/final.dir/Release/matrice_pesi.cpp.o: CXX_COMPILER__final_unsca
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.dir/Release/matrice_pesi.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.dir/Release
 
@@ -243,6 +247,7 @@ build CMakeFiles/final.dir/Release/rete_hopfield.cpp.o: CXX_COMPILER__final_unsc
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.dir/Release/rete_hopfield.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.dir/Release
 
@@ -254,9 +259,9 @@ build CMakeFiles/final.dir/Release/rete_hopfield.cpp.o: CXX_COMPILER__final_unsc
 #############################################
 # Link the executable Release/final
 
-build Release/final: CXX_EXECUTABLE_LINKER__final_Release CMakeFiles/final.dir/Release/main.cpp.o CMakeFiles/final.dir/Release/immagine.cpp.o CMakeFiles/final.dir/Release/pattern.cpp.o CMakeFiles/final.dir/Release/matrice_pesi.cpp.o CMakeFiles/final.dir/Release/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
+build Release/final: CXX_EXECUTABLE_LINKER__final_Release CMakeFiles/final.dir/Release/main.cpp.o CMakeFiles/final.dir/Release/immagine.cpp.o CMakeFiles/final.dir/Release/pattern.cpp.o CMakeFiles/final.dir/Release/matrice_pesi.cpp.o CMakeFiles/final.dir/Release/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0  /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   OBJECT_DIR = CMakeFiles/final.dir/Release
   POST_BUILD = :
   PRE_LINK = :
@@ -276,6 +281,7 @@ build CMakeFiles/final.test.dir/Release/immagine.test.cpp.o: CXX_COMPILER__final
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.test.dir/Release/immagine.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Release
 
@@ -283,6 +289,7 @@ build CMakeFiles/final.test.dir/Release/immagine.cpp.o: CXX_COMPILER__final.2ete
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.test.dir/Release/immagine.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Release
 
@@ -290,6 +297,7 @@ build CMakeFiles/final.test.dir/Release/pattern.test.cpp.o: CXX_COMPILER__final.
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.test.dir/Release/pattern.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Release
 
@@ -297,6 +305,7 @@ build CMakeFiles/final.test.dir/Release/pattern.cpp.o: CXX_COMPILER__final.2etes
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.test.dir/Release/pattern.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Release
 
@@ -304,6 +313,7 @@ build CMakeFiles/final.test.dir/Release/matrice_pesi.test.cpp.o: CXX_COMPILER__f
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.test.dir/Release/matrice_pesi.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Release
 
@@ -311,6 +321,7 @@ build CMakeFiles/final.test.dir/Release/matrice_pesi.cpp.o: CXX_COMPILER__final.
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.test.dir/Release/matrice_pesi.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Release
 
@@ -318,6 +329,7 @@ build CMakeFiles/final.test.dir/Release/rete_hopfield.test.cpp.o: CXX_COMPILER__
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.test.dir/Release/rete_hopfield.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Release
 
@@ -325,6 +337,7 @@ build CMakeFiles/final.test.dir/Release/rete_hopfield.cpp.o: CXX_COMPILER__final
   DEFINES = -DCMAKE_INTDIR=\"Release\"
   DEP_FILE = CMakeFiles/final.test.dir/Release/rete_hopfield.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Release
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Release
 
@@ -336,8 +349,9 @@ build CMakeFiles/final.test.dir/Release/rete_hopfield.cpp.o: CXX_COMPILER__final
 #############################################
 # Link the executable Release/final.test
 
-build Release/final.test: CXX_EXECUTABLE_LINKER__final.2etest_Release CMakeFiles/final.test.dir/Release/immagine.test.cpp.o CMakeFiles/final.test.dir/Release/immagine.cpp.o CMakeFiles/final.test.dir/Release/pattern.test.cpp.o CMakeFiles/final.test.dir/Release/pattern.cpp.o CMakeFiles/final.test.dir/Release/matrice_pesi.test.cpp.o CMakeFiles/final.test.dir/Release/matrice_pesi.cpp.o CMakeFiles/final.test.dir/Release/rete_hopfield.test.cpp.o CMakeFiles/final.test.dir/Release/rete_hopfield.cpp.o
+build Release/final.test: CXX_EXECUTABLE_LINKER__final.2etest_Release CMakeFiles/final.test.dir/Release/immagine.test.cpp.o CMakeFiles/final.test.dir/Release/immagine.cpp.o CMakeFiles/final.test.dir/Release/pattern.test.cpp.o CMakeFiles/final.test.dir/Release/pattern.cpp.o CMakeFiles/final.test.dir/Release/matrice_pesi.test.cpp.o CMakeFiles/final.test.dir/Release/matrice_pesi.cpp.o CMakeFiles/final.test.dir/Release/rete_hopfield.test.cpp.o CMakeFiles/final.test.dir/Release/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O3 -DNDEBUG
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0  /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   OBJECT_DIR = CMakeFiles/final.test.dir/Release
   POST_BUILD = :
   PRE_LINK = :

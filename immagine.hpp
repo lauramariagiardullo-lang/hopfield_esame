@@ -4,6 +4,7 @@
 #include "costanti.hpp"
 #include "pattern.hpp"
 #include <SFML/Graphics.hpp>
+#include <opencv2/core.hpp>
 #include <algorithm>
 #include <cassert>
 #include <filesystem>
@@ -18,14 +19,15 @@ get_file_names(std::filesystem::path const& cartella);
 class Immagine
 {
  private:
-  sf::Image image_originale_;
-  sf::Image image_binarizzata_;
+  cv::Mat image_originale_;
+  cv::Mat image_interpolata_;
+  cv::Mat image_binarizzata_;
 
  public:
   explicit Immagine(std ::filesystem::path const& file_path);
 
-  sf::Image interpolazione() const //?
-  {}
+
+  cv::Mat resize_interpolazione();
 
   Pattern binarizzazione();
 

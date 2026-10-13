@@ -12,7 +12,7 @@ TEST_CASE("testo get_file_names - cartella vuota")
   std::filesystem::remove_all(p);
 }
 
-TEST_CASE("testo get_file_names - no regular file disponibili")
+TEST_CASE("testo get_file_names - nessun regular file disponibile")
 {
   std::filesystem::path p1{"cart_1"};
   std::filesystem::path p2{p1 / "cart_2"};

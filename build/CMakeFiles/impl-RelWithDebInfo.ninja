@@ -215,6 +215,7 @@ build CMakeFiles/final.dir/RelWithDebInfo/main.cpp.o: CXX_COMPILER__final_unscan
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.dir/RelWithDebInfo/main.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.dir/RelWithDebInfo
 
@@ -222,6 +223,7 @@ build CMakeFiles/final.dir/RelWithDebInfo/immagine.cpp.o: CXX_COMPILER__final_un
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.dir/RelWithDebInfo/immagine.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.dir/RelWithDebInfo
 
@@ -229,6 +231,7 @@ build CMakeFiles/final.dir/RelWithDebInfo/pattern.cpp.o: CXX_COMPILER__final_uns
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.dir/RelWithDebInfo/pattern.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.dir/RelWithDebInfo
 
@@ -236,6 +239,7 @@ build CMakeFiles/final.dir/RelWithDebInfo/matrice_pesi.cpp.o: CXX_COMPILER__fina
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.dir/RelWithDebInfo/matrice_pesi.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.dir/RelWithDebInfo
 
@@ -243,6 +247,7 @@ build CMakeFiles/final.dir/RelWithDebInfo/rete_hopfield.cpp.o: CXX_COMPILER__fin
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.dir/RelWithDebInfo/rete_hopfield.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.dir/RelWithDebInfo
 
@@ -254,9 +259,9 @@ build CMakeFiles/final.dir/RelWithDebInfo/rete_hopfield.cpp.o: CXX_COMPILER__fin
 #############################################
 # Link the executable RelWithDebInfo/final
 
-build RelWithDebInfo/final: CXX_EXECUTABLE_LINKER__final_RelWithDebInfo CMakeFiles/final.dir/RelWithDebInfo/main.cpp.o CMakeFiles/final.dir/RelWithDebInfo/immagine.cpp.o CMakeFiles/final.dir/RelWithDebInfo/pattern.cpp.o CMakeFiles/final.dir/RelWithDebInfo/matrice_pesi.cpp.o CMakeFiles/final.dir/RelWithDebInfo/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
+build RelWithDebInfo/final: CXX_EXECUTABLE_LINKER__final_RelWithDebInfo CMakeFiles/final.dir/RelWithDebInfo/main.cpp.o CMakeFiles/final.dir/RelWithDebInfo/immagine.cpp.o CMakeFiles/final.dir/RelWithDebInfo/pattern.cpp.o CMakeFiles/final.dir/RelWithDebInfo/matrice_pesi.cpp.o CMakeFiles/final.dir/RelWithDebInfo/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0  /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   OBJECT_DIR = CMakeFiles/final.dir/RelWithDebInfo
   POST_BUILD = :
   PRE_LINK = :
@@ -276,6 +281,7 @@ build CMakeFiles/final.test.dir/RelWithDebInfo/immagine.test.cpp.o: CXX_COMPILER
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.test.dir/RelWithDebInfo/immagine.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
 
@@ -283,6 +289,7 @@ build CMakeFiles/final.test.dir/RelWithDebInfo/immagine.cpp.o: CXX_COMPILER__fin
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.test.dir/RelWithDebInfo/immagine.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
 
@@ -290,6 +297,7 @@ build CMakeFiles/final.test.dir/RelWithDebInfo/pattern.test.cpp.o: CXX_COMPILER_
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.test.dir/RelWithDebInfo/pattern.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
 
@@ -297,6 +305,7 @@ build CMakeFiles/final.test.dir/RelWithDebInfo/pattern.cpp.o: CXX_COMPILER__fina
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.test.dir/RelWithDebInfo/pattern.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
 
@@ -304,6 +313,7 @@ build CMakeFiles/final.test.dir/RelWithDebInfo/matrice_pesi.test.cpp.o: CXX_COMP
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.test.dir/RelWithDebInfo/matrice_pesi.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
 
@@ -311,6 +321,7 @@ build CMakeFiles/final.test.dir/RelWithDebInfo/matrice_pesi.cpp.o: CXX_COMPILER_
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.test.dir/RelWithDebInfo/matrice_pesi.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
 
@@ -318,6 +329,7 @@ build CMakeFiles/final.test.dir/RelWithDebInfo/rete_hopfield.test.cpp.o: CXX_COM
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.test.dir/RelWithDebInfo/rete_hopfield.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
 
@@ -325,6 +337,7 @@ build CMakeFiles/final.test.dir/RelWithDebInfo/rete_hopfield.cpp.o: CXX_COMPILER
   DEFINES = -DCMAKE_INTDIR=\"RelWithDebInfo\"
   DEP_FILE = CMakeFiles/final.test.dir/RelWithDebInfo/rete_hopfield.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
 
@@ -336,8 +349,9 @@ build CMakeFiles/final.test.dir/RelWithDebInfo/rete_hopfield.cpp.o: CXX_COMPILER
 #############################################
 # Link the executable RelWithDebInfo/final.test
 
-build RelWithDebInfo/final.test: CXX_EXECUTABLE_LINKER__final.2etest_RelWithDebInfo CMakeFiles/final.test.dir/RelWithDebInfo/immagine.test.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/immagine.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/pattern.test.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/pattern.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/matrice_pesi.test.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/matrice_pesi.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/rete_hopfield.test.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/rete_hopfield.cpp.o
+build RelWithDebInfo/final.test: CXX_EXECUTABLE_LINKER__final.2etest_RelWithDebInfo CMakeFiles/final.test.dir/RelWithDebInfo/immagine.test.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/immagine.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/pattern.test.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/pattern.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/matrice_pesi.test.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/matrice_pesi.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/rete_hopfield.test.cpp.o CMakeFiles/final.test.dir/RelWithDebInfo/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -O2 -g -DNDEBUG
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0  /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   OBJECT_DIR = CMakeFiles/final.test.dir/RelWithDebInfo
   POST_BUILD = :
   PRE_LINK = :

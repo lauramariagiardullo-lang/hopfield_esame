@@ -215,6 +215,7 @@ build CMakeFiles/final.dir/Debug/main.cpp.o: CXX_COMPILER__final_unscanned_Debug
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.dir/Debug/main.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.dir/Debug
 
@@ -222,6 +223,7 @@ build CMakeFiles/final.dir/Debug/immagine.cpp.o: CXX_COMPILER__final_unscanned_D
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.dir/Debug/immagine.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.dir/Debug
 
@@ -229,6 +231,7 @@ build CMakeFiles/final.dir/Debug/pattern.cpp.o: CXX_COMPILER__final_unscanned_De
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.dir/Debug/pattern.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.dir/Debug
 
@@ -236,6 +239,7 @@ build CMakeFiles/final.dir/Debug/matrice_pesi.cpp.o: CXX_COMPILER__final_unscann
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.dir/Debug/matrice_pesi.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.dir/Debug
 
@@ -243,6 +247,7 @@ build CMakeFiles/final.dir/Debug/rete_hopfield.cpp.o: CXX_COMPILER__final_unscan
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.dir/Debug/rete_hopfield.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.dir/Debug
 
@@ -254,10 +259,10 @@ build CMakeFiles/final.dir/Debug/rete_hopfield.cpp.o: CXX_COMPILER__final_unscan
 #############################################
 # Link the executable Debug/final
 
-build Debug/final: CXX_EXECUTABLE_LINKER__final_Debug CMakeFiles/final.dir/Debug/main.cpp.o CMakeFiles/final.dir/Debug/immagine.cpp.o CMakeFiles/final.dir/Debug/pattern.cpp.o CMakeFiles/final.dir/Debug/matrice_pesi.cpp.o CMakeFiles/final.dir/Debug/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
+build Debug/final: CXX_EXECUTABLE_LINKER__final_Debug CMakeFiles/final.dir/Debug/main.cpp.o CMakeFiles/final.dir/Debug/immagine.cpp.o CMakeFiles/final.dir/Debug/pattern.cpp.o CMakeFiles/final.dir/Debug/matrice_pesi.cpp.o CMakeFiles/final.dir/Debug/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined
   LINK_FLAGS = -fsanitize=address,undefined
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0  /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   OBJECT_DIR = CMakeFiles/final.dir/Debug
   POST_BUILD = :
   PRE_LINK = :
@@ -277,6 +282,7 @@ build CMakeFiles/final.test.dir/Debug/immagine.test.cpp.o: CXX_COMPILER__final.2
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.test.dir/Debug/immagine.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Debug
 
@@ -284,6 +290,7 @@ build CMakeFiles/final.test.dir/Debug/immagine.cpp.o: CXX_COMPILER__final.2etest
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.test.dir/Debug/immagine.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Debug
 
@@ -291,6 +298,7 @@ build CMakeFiles/final.test.dir/Debug/pattern.test.cpp.o: CXX_COMPILER__final.2e
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.test.dir/Debug/pattern.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Debug
 
@@ -298,6 +306,7 @@ build CMakeFiles/final.test.dir/Debug/pattern.cpp.o: CXX_COMPILER__final.2etest_
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.test.dir/Debug/pattern.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Debug
 
@@ -305,6 +314,7 @@ build CMakeFiles/final.test.dir/Debug/matrice_pesi.test.cpp.o: CXX_COMPILER__fin
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.test.dir/Debug/matrice_pesi.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Debug
 
@@ -312,6 +322,7 @@ build CMakeFiles/final.test.dir/Debug/matrice_pesi.cpp.o: CXX_COMPILER__final.2e
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.test.dir/Debug/matrice_pesi.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Debug
 
@@ -319,6 +330,7 @@ build CMakeFiles/final.test.dir/Debug/rete_hopfield.test.cpp.o: CXX_COMPILER__fi
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.test.dir/Debug/rete_hopfield.test.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Debug
 
@@ -326,6 +338,7 @@ build CMakeFiles/final.test.dir/Debug/rete_hopfield.cpp.o: CXX_COMPILER__final.2
   DEFINES = -DCMAKE_INTDIR=\"Debug\"
   DEP_FILE = CMakeFiles/final.test.dir/Debug/rete_hopfield.cpp.o.d
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
   OBJECT_DIR = CMakeFiles/final.test.dir/Debug
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir/Debug
 
@@ -337,9 +350,10 @@ build CMakeFiles/final.test.dir/Debug/rete_hopfield.cpp.o: CXX_COMPILER__final.2
 #############################################
 # Link the executable Debug/final.test
 
-build Debug/final.test: CXX_EXECUTABLE_LINKER__final.2etest_Debug CMakeFiles/final.test.dir/Debug/immagine.test.cpp.o CMakeFiles/final.test.dir/Debug/immagine.cpp.o CMakeFiles/final.test.dir/Debug/pattern.test.cpp.o CMakeFiles/final.test.dir/Debug/pattern.cpp.o CMakeFiles/final.test.dir/Debug/matrice_pesi.test.cpp.o CMakeFiles/final.test.dir/Debug/matrice_pesi.cpp.o CMakeFiles/final.test.dir/Debug/rete_hopfield.test.cpp.o CMakeFiles/final.test.dir/Debug/rete_hopfield.cpp.o
+build Debug/final.test: CXX_EXECUTABLE_LINKER__final.2etest_Debug CMakeFiles/final.test.dir/Debug/immagine.test.cpp.o CMakeFiles/final.test.dir/Debug/immagine.cpp.o CMakeFiles/final.test.dir/Debug/pattern.test.cpp.o CMakeFiles/final.test.dir/Debug/pattern.cpp.o CMakeFiles/final.test.dir/Debug/matrice_pesi.test.cpp.o CMakeFiles/final.test.dir/Debug/matrice_pesi.cpp.o CMakeFiles/final.test.dir/Debug/rete_hopfield.test.cpp.o CMakeFiles/final.test.dir/Debug/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined
   LINK_FLAGS = -fsanitize=address,undefined
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0  /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   OBJECT_DIR = CMakeFiles/final.test.dir/Debug
   POST_BUILD = :
   PRE_LINK = :
