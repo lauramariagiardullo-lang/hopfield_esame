@@ -12,7 +12,10 @@ void Rete_Hopfield::apprendimento(std::filesystem::path const& cartella_img,
                                   std::filesystem::path const& file_txt)
 {
   auto paths{insieme_pattern(cartella_img)};
+  //assert(paths.size()==N_immagini_usate_per_addestramento);
+ 
   hebb_.calcolo_matrice(paths);
+  
   hebb_.salva(file_txt);
 }
 

@@ -252,6 +252,13 @@ build CMakeFiles/final.dir/rete_hopfield.cpp.o: CXX_COMPILER__final_unscanned_De
   OBJECT_DIR = CMakeFiles/final.dir
   OBJECT_FILE_DIR = CMakeFiles/final.dir
 
+build CMakeFiles/final.dir/visualizzatore_immagine.cpp.o: CXX_COMPILER__final_unscanned_Debug /home/mariavittoria/hopfield_esame/visualizzatore_immagine.cpp || cmake_object_order_depends_target_final
+  DEP_FILE = CMakeFiles/final.dir/visualizzatore_immagine.cpp.o.d
+  FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/final.dir
+  OBJECT_FILE_DIR = CMakeFiles/final.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target final
@@ -260,7 +267,7 @@ build CMakeFiles/final.dir/rete_hopfield.cpp.o: CXX_COMPILER__final_unscanned_De
 #############################################
 # Link the executable final
 
-build final: CXX_EXECUTABLE_LINKER__final_Debug CMakeFiles/final.dir/main.cpp.o CMakeFiles/final.dir/immagine.cpp.o CMakeFiles/final.dir/pattern.cpp.o CMakeFiles/final.dir/matrice_pesi.cpp.o CMakeFiles/final.dir/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
+build final: CXX_EXECUTABLE_LINKER__final_Debug CMakeFiles/final.dir/main.cpp.o CMakeFiles/final.dir/immagine.cpp.o CMakeFiles/final.dir/pattern.cpp.o CMakeFiles/final.dir/matrice_pesi.cpp.o CMakeFiles/final.dir/rete_hopfield.cpp.o CMakeFiles/final.dir/visualizzatore_immagine.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined
   LINK_FLAGS = -fsanitize=address,undefined
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0  /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
@@ -335,6 +342,20 @@ build CMakeFiles/final.test.dir/rete_hopfield.cpp.o: CXX_COMPILER__final.2etest_
   OBJECT_DIR = CMakeFiles/final.test.dir
   OBJECT_FILE_DIR = CMakeFiles/final.test.dir
 
+build CMakeFiles/final.test.dir/visualizzatore_immagine.test.cpp.o: CXX_COMPILER__final.2etest_unscanned_Debug /home/mariavittoria/hopfield_esame/visualizzatore_immagine.test.cpp || cmake_object_order_depends_target_final.test
+  DEP_FILE = CMakeFiles/final.test.dir/visualizzatore_immagine.test.cpp.o.d
+  FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/final.test.dir
+  OBJECT_FILE_DIR = CMakeFiles/final.test.dir
+
+build CMakeFiles/final.test.dir/visualizzatore_immagine.cpp.o: CXX_COMPILER__final.2etest_unscanned_Debug /home/mariavittoria/hopfield_esame/visualizzatore_immagine.cpp || cmake_object_order_depends_target_final.test
+  DEP_FILE = CMakeFiles/final.test.dir/visualizzatore_immagine.cpp.o.d
+  FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined -std=c++20
+  INCLUDES = -isystem /usr/include/opencv4
+  OBJECT_DIR = CMakeFiles/final.test.dir
+  OBJECT_FILE_DIR = CMakeFiles/final.test.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target final.test
@@ -343,7 +364,7 @@ build CMakeFiles/final.test.dir/rete_hopfield.cpp.o: CXX_COMPILER__final.2etest_
 #############################################
 # Link the executable final.test
 
-build final.test: CXX_EXECUTABLE_LINKER__final.2etest_Debug CMakeFiles/final.test.dir/immagine.test.cpp.o CMakeFiles/final.test.dir/immagine.cpp.o CMakeFiles/final.test.dir/pattern.test.cpp.o CMakeFiles/final.test.dir/pattern.cpp.o CMakeFiles/final.test.dir/matrice_pesi.test.cpp.o CMakeFiles/final.test.dir/matrice_pesi.cpp.o CMakeFiles/final.test.dir/rete_hopfield.test.cpp.o CMakeFiles/final.test.dir/rete_hopfield.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
+build final.test: CXX_EXECUTABLE_LINKER__final.2etest_Debug CMakeFiles/final.test.dir/immagine.test.cpp.o CMakeFiles/final.test.dir/immagine.cpp.o CMakeFiles/final.test.dir/pattern.test.cpp.o CMakeFiles/final.test.dir/pattern.cpp.o CMakeFiles/final.test.dir/matrice_pesi.test.cpp.o CMakeFiles/final.test.dir/matrice_pesi.cpp.o CMakeFiles/final.test.dir/rete_hopfield.test.cpp.o CMakeFiles/final.test.dir/rete_hopfield.cpp.o CMakeFiles/final.test.dir/visualizzatore_immagine.test.cpp.o CMakeFiles/final.test.dir/visualizzatore_immagine.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0 /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0
   FLAGS = -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wshadow -Wimplicit-fallthrough -Wextra-semi -Wold-style-cast -fno-omit-frame-pointer -D_GLIBCXX_ASSERTIONS -D_GLIBCXX_SANITIZE_STD_ALLOCATOR -g -fsanitize=address,undefined
   LINK_FLAGS = -fsanitize=address,undefined
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1  /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.6.0  /usr/lib/x86_64-linux-gnu/libopencv_core.so.4.6.0

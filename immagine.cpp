@@ -36,6 +36,11 @@ Immagine::Immagine(std::filesystem::path const& file_path)
   }
 }
 
+cv::Size Immagine::size_originale() const
+{
+  return image_originale_.size();
+}
+
 cv::Mat Immagine::resize_interpolazione()
 {
   cv::Size dimensioni{altezza_immagine, larghezza_immagine};
@@ -51,6 +56,8 @@ Pattern Immagine::binarizzazione()
   cv::threshold(image_bianconero, image_binarizzata_, limite_colore, 255,
                 cv::THRESH_BINARY);
   Pattern p;
+  assert(p.size() == N_neuroni);
+
   for (int i{0}; i != image_binarizzata_.rows; ++i) {
     for (int j{0}; j != image_binarizzata_.cols; ++j) {
       auto neurone_bin{image_binarizzata_.at<uchar>(i, j) > 0.0
@@ -63,48 +70,14 @@ Pattern Immagine::binarizzazione()
   return p;
 }
 
-void Immagine::show_image(sf::RenderWindow& window) const
+image_4campi Immagine::conversione_openCV_to_SFML() const
 {
-  sf::Texture texture_originale;
-  sf::Texture texture_binarizzata;
-  auto size{image_originale_.size()};
-  if (!texture_originale.create(static_cast<unsigned int>(size.width),
-                                static_cast<unsigned int>(size.height))) {
-    throw std::runtime_error(
-        "impossibile creare la texture dell'immagine originale");
-  }
-
-  if (!texture_binarizzata.create(larghezza_immagine, altezza_immagine)) {
-    throw std::runtime_error(
-        "impossibile creare la texture dell'immagine binarizzata");
-  }
-  cv::Mat image_originale_4campi;
-  cv::Mat image_binarizzata_4campi;
-  cv::cvtColor(image_originale_, image_originale_4campi, cv::COLOR_BGR2RGBA);
-  cv::cvtColor(image_binarizzata_, image_binarizzata_4campi,
+  image_4campi conversione;
+  cv::cvtColor(image_originale_, conversione.image_originale_4campi,
+               cv::COLOR_BGR2RGBA);
+  cv::cvtColor(image_binarizzata_, conversione.image_binarizzata_4campi,
                cv::COLOR_GRAY2BGRA);
-  texture_originale.update(image_originale_4campi.data);
-  texture_binarizzata.update(image_binarizzata_4campi.data);
-  sf::Sprite sprite_originale(texture_originale);
-  sf::Sprite sprite_binarizzata(texture_binarizzata);
-  sprite_binarizzata.setScale(10.f,10.f);
-
-  while (window.isOpen()) {
-    sf::Event event;
-    while (window.pollEvent(event)) {
-      if (event.type == sf::Event::Closed) {
-        window.close();
-      }
-    }
-    window.clear();
-    window.draw(sprite_originale);
-    sf::Vector2f posizione_binarizzata{
-        static_cast<float>(texture_originale.getSize().x + 100),
-        static_cast<float>(texture_originale.getSize().y-700)};
-    sprite_binarizzata.setPosition(posizione_binarizzata);
-    window.draw(sprite_binarizzata);
-    window.display();
-  }
-}
+  return conversione;
+};
 
 } // namespace pf

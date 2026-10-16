@@ -11,6 +11,7 @@ inline constexpr int limite_colore = 127;
 inline const std::filesystem::path path_cartella_immagini{
     "immagini_addestramento_rete"};
 inline const std::filesystem::path path_file_matrice_pesi{"matrice_hebb.txt"};
+inline constexpr int N_immagini_usate_per_addestramento{11};
 } // namespace pf
 
 #endif

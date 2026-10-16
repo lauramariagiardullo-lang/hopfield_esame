@@ -18,7 +18,7 @@ double Matrice_Pesi::calcolo_elemento_ij(std::vector<Pattern> const& vp,
 {
   assert(i < N_neuroni);
   assert(j < N_neuroni);
-  if (vp.empty() == 0) {
+  if (vp.empty()) {
     throw std::runtime_error(
         "Pattern non trovati, impossibile calcolare la matrice dei pesi");
   }
@@ -76,9 +76,9 @@ double Matrice_Pesi::operator()(std::size_t riga, std::size_t colonna) const
 
 void Matrice_Pesi::salva(std::filesystem::path const& file_txt) const
 {
-  std::ofstream file("matrice_pesi.txt");
+  std::ofstream file(file_txt);
   if (!file) {
-    throw std::runtime_error(file_txt);
+    throw std::runtime_error("impossibile aprire o creare il file");
   }
   file << *this;
 }

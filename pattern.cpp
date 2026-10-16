@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <cassert>
 #include <filesystem>
+#include <iostream>
 #include <random>
 #include <stdexcept>
 #include <vector>
@@ -121,8 +122,10 @@ insieme_pattern(std::filesystem::path const& cartella_immagini)
   std::for_each(path.begin(), path.end(),
                 [&](std::filesystem::path const& percorso) {
                   Immagine img(percorso);
+                  img.resize_interpolazione();
                   p.push_back(img.binarizzazione());
                 });
+  //assert(p.size() == N_immagini_usate_per_addestramento);
   return p;
 }
 

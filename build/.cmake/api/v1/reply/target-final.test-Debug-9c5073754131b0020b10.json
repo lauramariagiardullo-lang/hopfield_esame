@@ -108,7 +108,9 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8,
+				9
 			]
 		}
 	],
@@ -178,7 +180,9 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				8,
+				9
 			]
 		}
 	],
@@ -230,6 +234,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "rete_hopfield.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "visualizzatore_immagine.test.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "visualizzatore_immagine.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

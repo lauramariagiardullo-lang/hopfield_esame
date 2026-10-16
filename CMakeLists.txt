@@ -37,7 +37,7 @@ string(APPEND CMAKE_EXE_LINKER_FLAGS_DEBUG " -fsanitize=address,undefined")
 find_package(SFML 2.6 COMPONENTS graphics REQUIRED)
 find_package(OpenCV REQUIRED COMPONENTS core imgproc imgcodecs)
 
-add_executable(final main.cpp immagine.cpp pattern.cpp matrice_pesi.cpp rete_hopfield.cpp immagine.hpp pattern.hpp matrice_pesi.hpp rete_hopfield.hpp costanti.hpp)
+add_executable(final main.cpp immagine.cpp pattern.cpp matrice_pesi.cpp rete_hopfield.cpp visualizzatore_immagine.cpp immagine.hpp pattern.hpp matrice_pesi.hpp rete_hopfield.hpp costanti.hpp visualizzatore_immagine.hpp)
 # nel caso si usi SFML. analogamente per eventuali altre librerie
 target_link_libraries(final PRIVATE sfml-graphics opencv_core opencv_imgproc opencv_imgcodecs)
 
@@ -46,7 +46,7 @@ target_link_libraries(final PRIVATE sfml-graphics opencv_core opencv_imgproc ope
 # per disabilitarlo, passare -DBUILD_TESTING=OFF a cmake durante la fase di configurazione
 if (BUILD_TESTING)
 
-  add_executable(final.test immagine.test.cpp immagine.cpp pattern.test.cpp pattern.cpp matrice_pesi.test.cpp matrice_pesi.cpp rete_hopfield.test.cpp rete_hopfield.cpp)
+  add_executable(final.test immagine.test.cpp immagine.cpp pattern.test.cpp pattern.cpp matrice_pesi.test.cpp matrice_pesi.cpp rete_hopfield.test.cpp rete_hopfield.cpp visualizzatore_immagine.test.cpp visualizzatore_immagine.cpp)
 
   target_link_libraries(final.test PRIVATE sfml-graphics opencv_core opencv_imgproc opencv_imgcodecs)
 
