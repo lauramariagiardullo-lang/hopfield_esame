@@ -12,10 +12,10 @@ void Rete_Hopfield::apprendimento(std::filesystem::path const& cartella_img,
                                   std::filesystem::path const& file_txt)
 {
   auto paths{insieme_pattern(cartella_img)};
-  //assert(paths.size()==N_immagini_usate_per_addestramento);
- 
+  // assert(paths.size()==N_immagini_usate_per_addestramento);
+
   hebb_.calcolo_matrice(paths);
-  
+
   hebb_.salva(file_txt);
 }
 
@@ -41,19 +41,36 @@ Pattern Rete_Hopfield::aggiornamento_pattern(Pattern& corrotto)
   return corrotto;
 }
 
-Pattern Rete_Hopfield::convergenza(Pattern& corrotto)
+double Rete_Hopfield::funzione_energia(Pattern const& p) const
+{
+  std::vector<std::size_t> indici(p.size());
+  assert(indici.size() == p.size());
+  std::iota(indici.begin(), indici.end(), 0);
+  double somma_completa = std::accumulate(
+      indici.begin(), indici.end(), 0.0,
+      [this, &p](std::size_t i, double somma) {
+        auto contributo_singola_riga = std::inner_product(
+            hebb_.riga(i).begin(), hebb_.riga(i).end(), p.begin(), 0.0);
+        return somma + p[i] * contributo_singola_riga;
+      });
+  double energia{-0.5 * somma_completa};
+  return energia;
+};
+
+Pattern Rete_Hopfield::convergenza(Pattern& corrotto, std::vector<double>& vettore_energia)
 {
   auto precedente{corrotto};
   auto attuale{aggiornamento_pattern(corrotto)};
+  vettore_energia.push_back(funzione_energia(attuale));
   if (precedente == attuale) {
     return attuale;
   } else {
-    return convergenza(corrotto);
+    return convergenza(corrotto, vettore_energia);
   }
 }
 
 Pattern Rete_Hopfield::richiamo(char metodo_corruzione,
-                                Pattern const& originale)
+                                Pattern const& originale, std::vector<double>& vettore_energia)
 {
   if (metodo_corruzione == 'r') {
     std::cout << "si inserisca la probabilità che un pixel venga corrotto";
@@ -64,7 +81,7 @@ Pattern Rete_Hopfield::richiamo(char metodo_corruzione,
           "casuale non è accettabile");
     }
     Pattern corrotto{corruzione_rumore_casuale(originale, probabilità)};
-    return convergenza(corrotto);
+    return convergenza(corrotto, vettore_energia);
   } else if (metodo_corruzione == 't') {
     std::cout << "si inserisca la metà immagine interessata alla corruzione:\n"
               << "parte superiore[sup] \n"
@@ -75,8 +92,28 @@ Pattern Rete_Hopfield::richiamo(char metodo_corruzione,
                                "interessata non è valido");
     }
     Pattern corrotto{corruzione_taglio(originale, metà_selezionata)};
-    return convergenza(corrotto);
+    return convergenza(corrotto, vettore_energia);
   }
   throw std::runtime_error("il metodo di corruzione inserito non è valido ");
 };
+
+void Rete_Hopfield::pattern_originale_vs_pattern_finale(
+    Pattern const& originale, Pattern const& finale) const
+{
+  assert(originale.size() == finale.size());
+  if (originale == finale) {
+    std::cout << "ricostruzione del pattern corretta\n"
+              << "il pattern finale, ottenuto dal richiamo della rete sul "
+                 "pattern coorrotto, è uguale al pattern originale\n";
+  } else {
+    std::size_t i{0};
+    auto N_differenti =
+        std::count_if(originale.begin(), originale.end(),
+                      [&](Stato_Neurone const& n) { return n != finale[++i]; });
+    auto percentuale{(N_differenti / N_neuroni) * 100};
+    std::cout << "il pattern originale e quello finale non sono identici:\n"
+              << "differiscono del" << percentuale << "%\n";
+  }
+};
+
 } // namespace pf

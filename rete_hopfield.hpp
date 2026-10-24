@@ -2,6 +2,7 @@
 #define PF_RETE_HOPFIELD_HPP
 
 #include "matrice_pesi.hpp"
+#include <algorithm>
 #include <cassert>
 #include <cmath>
 #include <iostream>
@@ -25,10 +26,15 @@ class Rete_Hopfield
 
   Pattern aggiornamento_pattern(Pattern& corrotto);
 
-  Pattern convergenza(Pattern& corrotto);
+  double funzione_energia(Pattern const& p) const;
 
-  Pattern richiamo(char metodo_corruzione, Pattern const& originale);
+  Pattern convergenza(Pattern& corrotto, std::vector<double>& vettore_energia);
+
+  Pattern richiamo(char metodo_corruzione, Pattern const& originale, std::vector<double>& vettore_energia);
+
+  void pattern_originale_vs_pattern_finale(Pattern const& originale,
+                                           Pattern const& finale) const;
 };
-} // namespace pf
 
+} // namespace pf
 #endif

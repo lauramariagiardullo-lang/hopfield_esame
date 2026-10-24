@@ -50,4 +50,22 @@ void visualizzatore_immagine::gestione_finestra(
   }
 };
 
+
+
+void plot_grafico(dati_grafico const& dg )
+{
+  assert(dg.dati_x.size() == dg.dati_y.size());
+  PLINT N_punti{static_cast<PLINT>(dg.dati_y.size())};
+  PLFLT x_max{*std::max_element(dg.dati_x.begin(), dg.dati_x.end())};
+  PLFLT y_max{*std::max_element(dg.dati_y.begin(), dg.dati_y.end())};
+  PLFLT x_min{0.0};
+  PLFLT y_min{*std::min_element(dg.dati_y.begin(), dg.dati_y.end())};
+  plstream plot;
+  plot.plstream::env(x_min, x_max, y_min, y_max, 0, 1);
+  plot.plstream::lab(dg.etichetta_asse_x.data(), dg.etichetta_asse_y.data(), dg.titolo.data());
+  plot.plstream::line(N_punti, dg.dati_x.data(), dg.dati_y.data());
+  plot.plstream::eop();
+};
+
+
 } // namespace pf

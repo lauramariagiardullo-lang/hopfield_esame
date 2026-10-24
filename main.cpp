@@ -47,6 +47,7 @@ int main()
     // pattern_selezionato=pf::insieme_pattern(pf::path_cartella_immagini)[n];
     // pf::Pattern
     // pattern_finale{rete_neurale.pf::Rete_Hopfield::richiamo(cp,pattern_selezionato)};
+    // rete_neurale.pf::Rete_Hopfield::pattern_originale_vs_pattern_finale(pattern_selezionato,pattern_finale);
 
 
 
