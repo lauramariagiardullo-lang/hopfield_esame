@@ -41,7 +41,7 @@ pkg_check_modules(PLPLOT_CXX REQUIRED IMPORTED_TARGET plplot-c++)
 
 add_executable(final main.cpp immagine.cpp pattern.cpp matrice_pesi.cpp rete_hopfield.cpp visualizzatore_immagine.cpp immagine.hpp pattern.hpp matrice_pesi.hpp rete_hopfield.hpp costanti.hpp visualizzatore_immagine.hpp)
 # nel caso si usi SFML. analogamente per eventuali altre librerie
-target_link_libraries(final PRIVATE sfml-graphics opencv_core opencv_imgproc opencv_imgcodecs PkgConfig::PLPLOT_CXX)
+target_link_libraries(final PRIVATE sfml-graphics opencv_core opencv_imgproc opencv_imgcodecs PkgConfig::PLPLOT_CXX plplot)
 
 
 # il testing e' abilitato di default
@@ -50,7 +50,7 @@ if (BUILD_TESTING)
 
   add_executable(final.test immagine.test.cpp immagine.cpp pattern.test.cpp pattern.cpp matrice_pesi.test.cpp matrice_pesi.cpp rete_hopfield.test.cpp rete_hopfield.cpp visualizzatore_immagine.test.cpp visualizzatore_immagine.cpp)
 
-  target_link_libraries(final.test PRIVATE sfml-graphics opencv_core opencv_imgproc opencv_imgcodecs PkgConfig::PLPLOT_CXX)
+  target_link_libraries(final.test PRIVATE sfml-graphics opencv_core opencv_imgproc opencv_imgcodecs PkgConfig::PLPLOT_CXX plplot)
 
   add_test(NAME final.test COMMAND final.test)
 

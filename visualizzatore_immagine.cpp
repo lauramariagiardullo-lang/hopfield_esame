@@ -43,29 +43,43 @@ void visualizzatore_immagine::gestione_finestra(
       }
     }
     sf::Vector2f posizione_binarizzata{
-        static_cast<float>(texture_originale_.getSize().x + 100),
+        static_cast<float>(texture_originale_.getSize().x + 50),
         static_cast<float>(texture_originale_.getSize().y - 700)};
+    sf::Vector2f posizione_originale{30.f, 50.f};
+    sprite_originale_.setPosition(posizione_originale);
     sprite_binarizzata_.setPosition(posizione_binarizzata);
     view.show_image(window);
   }
 };
 
-
-
-void plot_grafico(dati_grafico const& dg )
+void plot_grafico(dati_grafico const& dg, plstream& plot)
 {
   assert(dg.dati_x.size() == dg.dati_y.size());
   PLINT N_punti{static_cast<PLINT>(dg.dati_y.size())};
-  PLFLT x_max{*std::max_element(dg.dati_x.begin(), dg.dati_x.end())};
-  PLFLT y_max{*std::max_element(dg.dati_y.begin(), dg.dati_y.end())};
+  PLFLT x_max{*std::max_element(dg.dati_x.begin(), dg.dati_x.end()) + 5};
+  PLFLT y_max{*std::max_element(dg.dati_y.begin(), dg.dati_y.end()) + 5};
   PLFLT x_min{0.0};
-  PLFLT y_min{*std::min_element(dg.dati_y.begin(), dg.dati_y.end())};
-  plstream plot;
-  plot.plstream::env(x_min, x_max, y_min, y_max, 0, 1);
-  plot.plstream::lab(dg.etichetta_asse_x.data(), dg.etichetta_asse_y.data(), dg.titolo.data());
-  plot.plstream::line(N_punti, dg.dati_x.data(), dg.dati_y.data());
-  plot.plstream::eop();
+  PLFLT y_min{*std::min_element(dg.dati_y.begin(), dg.dati_y.end()) - 5};
+  plot.init();
+  plot.env(x_min, x_max, y_min, y_max, 0, 1);
+  plot.lab(dg.etichetta_asse_x.data(), dg.etichetta_asse_y.data(),
+           dg.titolo.data());
+  plot.line(N_punti, dg.dati_x.data(), dg.dati_y.data());
 };
 
+void show_grafico_finestra(dati_grafico const& dg)
+{
+  plstream plot;
+  plot.sdev("qtwidget");
+  plot_grafico(dg, plot);
+}
+
+void salva_grafico_file(dati_grafico const& dg)
+{
+  plstream plot;
+  plot.sdev("png");
+  plot.sfnam("grafico_energia.png");
+  plot_grafico(dg, plot);
+}
 
 } // namespace pf

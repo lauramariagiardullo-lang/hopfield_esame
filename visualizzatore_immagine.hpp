@@ -24,12 +24,16 @@ struct dati_grafico{
   std::string titolo;
   std::string etichetta_asse_x;
   std::string etichetta_asse_y;
-  std::vector<double> dati_x;
   std::vector<double> dati_y;
+  std::vector<double> dati_x;
 
 };
 
-void plot_grafico(dati_grafico const& dati);
+void plot_grafico(dati_grafico const& dati, plstream& plot);
+
+void show_grafico_finestra(dati_grafico const& dati);
+
+void salva_grafico_file(dati_grafico const& dati);
 
 } // namespace pf
 

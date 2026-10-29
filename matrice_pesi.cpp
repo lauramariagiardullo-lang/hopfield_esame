@@ -3,9 +3,11 @@
 #include <algorithm>
 #include <cassert>
 #include <fstream>
+#include <iostream>
 #include <numeric>
 #include <random>
 #include <stdexcept>
+#include <iomanip>
 
 namespace pf {
 
@@ -80,6 +82,7 @@ void Matrice_Pesi::salva(std::filesystem::path const& file_txt) const
   if (!file) {
     throw std::runtime_error("impossibile aprire o creare il file");
   }
+  file<<std::setprecision(17);
   file << *this;
 }
 

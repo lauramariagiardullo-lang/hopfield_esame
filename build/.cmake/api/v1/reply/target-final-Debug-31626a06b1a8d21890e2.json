@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "final.test"
+			"path" : "final"
 		}
 	],
 	"backtrace" : 1,
@@ -35,13 +35,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 51,
+				"line" : 42,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 53,
+				"line" : 44,
 				"parent" : 0
 			},
 			{
@@ -140,15 +140,11 @@
 				2,
 				3,
 				4,
-				5,
-				6,
-				7,
-				8,
-				9
+				5
 			]
 		}
 	],
-	"id" : "final.test::@6890427a1f51a3e7e1df",
+	"id" : "final::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -169,6 +165,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.6.0",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lplplot",
 				"role" : "libraries"
 			},
 			{
@@ -199,8 +200,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "final.test",
-	"nameOnDisk" : "final.test",
+	"name" : "final",
+	"nameOnDisk" : "final",
 	"paths" : 
 	{
 		"build" : ".",
@@ -217,11 +218,19 @@
 				2,
 				3,
 				4,
-				5,
+				5
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
 				6,
 				7,
 				8,
-				9
+				9,
+				10,
+				11
 			]
 		}
 	],
@@ -230,7 +239,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "immagine.test.cpp",
+			"path" : "main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -242,19 +251,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "pattern.test.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "pattern.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "matrice_pesi.test.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -266,19 +263,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "rete_hopfield.test.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "rete_hopfield.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "visualizzatore_immagine.test.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -286,6 +271,36 @@
 			"compileGroupIndex" : 0,
 			"path" : "visualizzatore_immagine.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "immagine.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "pattern.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "matrice_pesi.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "rete_hopfield.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "costanti.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "visualizzatore_immagine.hpp",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

@@ -23,7 +23,7 @@ get_file_names(std::filesystem::path const& cartella)
     throw std::runtime_error(
         "la cartella è vuota o non contiene oggetti validi");
   }
-
+  std::sort(file_names.begin(),file_names.end());
   return file_names;
 }
 
