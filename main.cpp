@@ -30,12 +30,6 @@ int main()
     rete_neurale.pf::Rete_Hopfield::apprendimento(pf::path_cartella_immagini,
                                                   pf::path_file_matrice_pesi);
     pf::Rete_Hopfield rete_addestrata(pf::path_file_matrice_pesi);
-pf::Matrice_Pesi matrice_calcolata;
-matrice_calcolata.calcolo_matrice(
-    pf::insieme_pattern(pf::path_cartella_immagini));
-
-pf::Matrice_Pesi matrice_caricata;
-matrice_caricata.carica(pf::path_file_matrice_pesi);
 
     std::cout << "si inserisca il tipo di corruzione del pattern scelto: \n"
               << "rumore casuale [r] \n"
