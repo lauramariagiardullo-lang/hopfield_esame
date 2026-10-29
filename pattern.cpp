@@ -59,8 +59,7 @@ Stato_Neurone const& Pattern::operator[](std::size_t i) const
 
 bool operator==(Pattern const& a, Pattern const& b)
 {
-  assert(a.size() == N_neuroni);
-  assert(b.size() == N_neuroni);
+  assert(a.size() ==b.size());
   return std::equal(a.pattern_.begin(), a.pattern_.end(), b.pattern_.begin());
 }
 

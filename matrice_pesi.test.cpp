@@ -47,13 +47,13 @@ TEST_CASE("Testo Matrice_Pesi - calcolo_matrice - uso di un singolo pattern")
   pf::Matrice_Pesi hebbs;
   hebbs.calcolo_matrice(vp);
   CHECK(hebbs(0, 0) == 0.0);
-  CHECK(hebbs(0, 1) == doctest::Approx(-1 / pf::N_neuroni).epsilon(1e-5));
-  CHECK(hebbs(1, 0) == doctest::Approx(-1 / pf::N_neuroni).epsilon(1e-5));
-  CHECK(hebbs(30, 29) == doctest::Approx(1 / pf::N_neuroni).epsilon(1e-5));
-  CHECK(hebbs(13, 6) == doctest::Approx(1 / pf::N_neuroni).epsilon(1e-5));
-  CHECK(hebbs(6, 13) == doctest::Approx(1 / pf::N_neuroni).epsilon(1e-5));
-  CHECK(hebbs(5, 16) == doctest::Approx(1 / pf::N_neuroni).epsilon(1e-5));
-  CHECK(hebbs(16, 27) == doctest::Approx(-1 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(0, 1) == doctest::Approx(-1.0 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(1, 0) == doctest::Approx(-1.0 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(30, 29) == doctest::Approx(1.0 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(13, 6) == doctest::Approx(1.0 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(6, 13) == doctest::Approx(1.0 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(5, 16) == doctest::Approx(1.0 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(16, 27) == doctest::Approx(-1.0 / pf::N_neuroni).epsilon(1e-5));
 }
 
 TEST_CASE("Testo Matrice_Pesi - calcolo_matrice - 3 pattern")
@@ -81,10 +81,10 @@ TEST_CASE("Testo Matrice_Pesi - calcolo_matrice - 3 pattern")
   pf::Matrice_Pesi hebbs;
   hebbs.calcolo_matrice(vp);
   CHECK(hebbs(3, 3) == 0.0);
-  CHECK(hebbs(24, 19) == doctest::Approx(3 / pf::N_neuroni).epsilon(1e-5));
-  CHECK(hebbs(2, 3) == doctest::Approx(1 / pf::N_neuroni).epsilon(1e-5));
-  CHECK(hebbs(2, 19) == doctest::Approx(-1 / pf::N_neuroni).epsilon(1e-5));
-  CHECK(hebbs(14, 8) == doctest::Approx(3 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(24, 19) == doctest::Approx(3.0 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(2, 3) == doctest::Approx(1.0 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(2, 19) == doctest::Approx(1.0 / pf::N_neuroni).epsilon(1e-5));
+  CHECK(hebbs(14, 8) == doctest::Approx(3.0 / pf::N_neuroni).epsilon(1e-5));
 }
 
 TEST_CASE("Testo Matrice_Pesi - calcolo_matrice - verifico diagonale nulla")
