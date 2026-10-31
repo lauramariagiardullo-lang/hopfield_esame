@@ -1,24 +1,24 @@
-Start testing: Oct 29 20:22 CET
+Start testing: Oct 30 20:47 CET
 ----------------------------------------------------------
 1/1 Testing: final.test
 1/1 Test: final.test
 Command: "/home/mariavittoria/hopfield_esame/build/final.test"
 Directory: /home/mariavittoria/hopfield_esame/build
-"final.test" start time: Oct 29 20:22 CET
+"final.test" start time: Oct 30 20:47 CET
 Output:
 ----------------------------------------------------------
 [doctest] doctest version is "2.4.12"
 [doctest] run with "--help" for options
 ===============================================================================
-[doctest] test cases:      19 |      19 passed | 0 failed | 0 skipped
-[doctest] assertions: 1620946 | 1620946 passed | 0 failed |
+[doctest] test cases:      46 |      46 passed | 0 failed | 0 skipped
+[doctest] assertions: 1621010 | 1621010 passed | 0 failed |
 [doctest] Status: SUCCESS!
 <end of output>
-Test time =   2.85 sec
+Test time =   3.02 sec
 ----------------------------------------------------------
 Test Passed.
-"final.test" end time: Oct 29 20:22 CET
-"final.test" time elapsed: 00:00:02
+"final.test" end time: Oct 30 20:47 CET
+"final.test" time elapsed: 00:00:03
 ----------------------------------------------------------
 
-End testing: Oct 29 20:22 CET
+End testing: Oct 30 20:47 CET

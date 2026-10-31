@@ -7,6 +7,12 @@ Rete_Hopfield::Rete_Hopfield(std::filesystem::path const& file_matrice)
 {
   hebb_.carica(file_matrice);
 }
+Rete_Hopfield::Rete_Hopfield(std::size_t n,
+                             std::filesystem::path const& file_matrice)
+    : hebb_(n)
+{
+  hebb_.carica(file_matrice);
+}
 
 void Rete_Hopfield::apprendimento(std::filesystem::path const& cartella_img,
                                   std::filesystem::path const& file_txt)

@@ -59,7 +59,9 @@ Stato_Neurone const& Pattern::operator[](std::size_t i) const
 
 bool operator==(Pattern const& a, Pattern const& b)
 {
-  assert(a.size() ==b.size());
+  if (a.size() != b.size()) {
+    return false;
+  }
   return std::equal(a.pattern_.begin(), a.pattern_.end(), b.pattern_.begin());
 }
 
@@ -124,7 +126,7 @@ insieme_pattern(std::filesystem::path const& cartella_immagini)
                   img.resize_interpolazione();
                   p.push_back(img.binarizzazione());
                 });
-  //assert(p.size() == N_immagini_usate_per_addestramento);
+  // assert(p.size() == N_immagini_usate_per_addestramento);
   return p;
 }
 

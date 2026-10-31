@@ -11,6 +11,7 @@ class Matrice_Pesi
 
  public:
   explicit Matrice_Pesi();
+  explicit Matrice_Pesi(std::size_t n); //solo per facilitare i test
 
   double calcolo_elemento_ij(std::vector<Pattern> const& vp, std::size_t i,
                              std::size_t j);
@@ -33,9 +34,10 @@ class Matrice_Pesi
   friend bool operator==(Matrice_Pesi a, Matrice_Pesi b);
   friend std::ostream& operator<<(std::ostream& out,
                                   Matrice_Pesi const& matrix);
+  friend std::istream& operator>>(std::istream& in, Matrice_Pesi& matrix);
 };
 
-std::istream& operator>>(std::istream& in, Matrice_Pesi& matrix);
+
 
 } // namespace pf
 

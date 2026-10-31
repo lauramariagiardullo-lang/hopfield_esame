@@ -18,6 +18,9 @@ class Rete_Hopfield
  public:
   Rete_Hopfield() = default;
   explicit Rete_Hopfield(std::filesystem::path const& file_matrice);
+  explicit Rete_Hopfield(
+      std::size_t n,
+      std::filesystem::path const& file_matrice); // solo per i test
 
   void apprendimento(std::filesystem::path const& cartella_img,
                      std::filesystem::path const& file_txt);
@@ -30,7 +33,8 @@ class Rete_Hopfield
 
   Pattern convergenza(Pattern& corrotto, std::vector<double>& vettore_energia);
 
-  Pattern richiamo(char metodo_corruzione, Pattern const& originale, std::vector<double>& vettore_energia);
+  Pattern richiamo(char metodo_corruzione, Pattern const& originale,
+                   std::vector<double>& vettore_energia);
 
   void pattern_originale_vs_pattern_finale(Pattern const& originale,
                                            Pattern const& finale) const;

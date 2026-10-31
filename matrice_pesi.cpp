@@ -3,16 +3,20 @@
 #include <algorithm>
 #include <cassert>
 #include <fstream>
+#include <iomanip>
 #include <iostream>
 #include <numeric>
 #include <random>
 #include <stdexcept>
-#include <iomanip>
 
 namespace pf {
 
 Matrice_Pesi::Matrice_Pesi()
     : mp_(N_neuroni, std::vector<double>(N_neuroni))
+{}
+
+Matrice_Pesi::Matrice_Pesi(std::size_t n)
+    : mp_(n, std::vector<double>(n, 0.0))
 {}
 
 double Matrice_Pesi::calcolo_elemento_ij(std::vector<Pattern> const& vp,
@@ -82,7 +86,7 @@ void Matrice_Pesi::salva(std::filesystem::path const& file_txt) const
   if (!file) {
     throw std::runtime_error("impossibile aprire o creare il file");
   }
-  file<<std::setprecision(17);
+  file << std::setprecision(17);
   file << *this;
 }
 
@@ -117,8 +121,8 @@ std::ostream& operator<<(std::ostream& out, Matrice_Pesi const& matrix)
 
 std::istream& operator>>(std::istream& in, Matrice_Pesi& matrix)
 {
-  for (std::size_t i{0}; i != N_neuroni; ++i) {
-    for (std::size_t j{0}; j != N_neuroni; ++j) {
+  for (std::size_t i{0}; i != matrix.mp_.size(); ++i) {
+    for (std::size_t j{0}; j != matrix.mp_.size(); ++j) {
       in >> matrix(i, j);
     }
   }
